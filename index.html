@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RESASテスト</title>
+<!--jQueryを読み込む-->
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<script>
+//    非同期処理：リクエストを送り、結果が返っててきたときにsuccess内の処理を開始。
+    $.ajax({
+        url: "https://opendata.resas-portal.go.jp/api/v1/prefectures",
+        type: "GET",
+        headers: {
+            'X-API-KEY': 'ここに取得したAPIキーを入れてください。'//APIキー
+        },
+        success: function(result) {
+            console.log(result)
+        }
+    });
+</script>
+</body>
+</html>
